@@ -1,25 +1,22 @@
+/* Tailwind imports */
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+/* Light and Dark Mode support */
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
 
   color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #c29999;
+  --text-color: rgba(255, 255, 255, 0.87); /* Text color for dark mode */
+  --background-color: #c29999;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-}
-
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
 }
 
 body {
@@ -30,6 +27,7 @@ body {
   min-height: 100vh;
   background: url("/src/assets/bg2.jpg") no-repeat center center fixed;
   background-size: cover;
+  color: var(--text-color);
 }
 
 h1 {
@@ -37,17 +35,33 @@ h1 {
   line-height: 1.1;
 }
 
-.card {
-  padding: 2em;
+input, textarea {
+  color: var(--text-color);
+  background-color: #ffffff;
+  border: 1px solid #ccc;
+  padding: 0.5em;
+  border-radius: 4px;
+  width: 100%;
 }
 
-#app {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+/* Dark mode settings */
+[data-theme="dark"] {
+  --text-color: rgba(255, 255, 255, 0.87);
+  --background-color: #2d2d2d;
 }
 
+[data-theme="dark"] body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+[data-theme="dark"] input, [data-theme="dark"] textarea {
+  background-color: #333;
+  color: rgba(255, 255, 255, 0.87);
+  border-color: #444;
+}
+
+/* General button styling */
 button {
   border-radius: 8px;
   border: 1px solid transparent;
@@ -59,22 +73,32 @@ button {
   cursor: pointer;
   transition: border-color 0.25s;
 }
+
 button:hover {
   border-color: #646cff;
 }
+
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
+/* Light mode settings */
 @media (prefers-color-scheme: light) {
   :root {
-    color: #213547;
-    background-color: #ffffff;
+    --text-color: rgba(255, 255, 255, 0.87);
+    --background-color: #ffffff;
   }
+
+  body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+  }
+
   a:hover {
     color: #747bff;
   }
+
   button {
     background-color: #f9f9f9;
   }
