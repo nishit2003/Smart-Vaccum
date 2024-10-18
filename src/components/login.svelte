@@ -93,7 +93,7 @@
         box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
     }
 
-    input, select {
+    input{
         margin: 0.75rem 0;
         padding: 0.8rem;
         width: 100%;
@@ -103,7 +103,7 @@
         transition: border-color 0.3s ease-in-out;
     }
 
-    input:focus, select:focus {
+    input:focus {
         border-color: #007bff;
         outline: none;
     }

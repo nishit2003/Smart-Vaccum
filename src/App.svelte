@@ -1,10 +1,10 @@
 <script>
-  import Timer from './components/timer.svelte';
+  import Timer from './components/Timer.svelte';
   // import Login from './components/login.svelte';
   import Navbar from './components/Navbar.svelte';
   import "./app.css";
 
-  let loggedIn = false;
+  // let loggedIn = false;
   let user = { username: "", name: "" };
   let isDarkMode = false;
 
@@ -21,12 +21,12 @@
   const onLoginSuccess = (event) => {
     user.username = event.detail.username;
     user.name = event.detail.name;
-    loggedIn = true;
+    // loggedIn = true;
     alert(`Welcome, ${user.name}!`);
   };
 
   const handleLogout = () => {
-    loggedIn = false;
+    // loggedIn = false;
     user = { username: "", name: "" };
     alert("You have been logged out.");
   };
@@ -34,7 +34,6 @@
 
 <!-- Use the Navbar component -->
 <Navbar
-  {loggedIn}
   {user}
   {isDarkMode}
   {toggleTheme}
