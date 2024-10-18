@@ -5,6 +5,7 @@
   let timeInput = 0;
   let timeRemaining = 0;
   let timerInterval;
+  export let isDarkMode = false;
 
   const startTimer = () => {
     if (timeInput > 0) {
@@ -49,7 +50,9 @@
   {/if}
 
   {#if timerStarted}
+  <div class="timer-box {isDarkMode ? 'dark' : 'light'}">
     <p class="time-remaining">Time remaining: {timeRemaining} seconds</p>
+  </div>
   {/if}
 </div>
 
@@ -64,6 +67,16 @@
     margin: 2em auto;
     text-align: center;
     transition: transform 0.3s ease;
+  }
+
+  .timer-box.light {
+    background-color: #f4f4f4;
+    color: #333;
+  }
+
+  .timer-box.dark {
+    background-color: black;
+    color: white;
   }
 
   .box:hover {
