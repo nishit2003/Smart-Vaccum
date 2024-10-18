@@ -27,7 +27,7 @@
   <div class="flex items-center md:order-2">
     {#if loggedIn}
       <Avatar id="avatar-menu" src="/images/profile-picture-3.webp"></Avatar>
-      <Dropdown placement="bottom" triggeredby="#avatar-menu">
+      <Dropdown placement="bottom" triggeredBy="#avatar-menu">
         <DropdownHeader>
           <span class="block text-sm">{user.name}</span>
           <span class="block truncate text-sm font-medium">{user.username}</span>
@@ -45,7 +45,7 @@
   </div>
 
   <NavUl>
-    <NavLi href="/" active="{true}">Home</NavLi>
+    <NavLi href="/" activeClass="active">Home</NavLi>
     <NavLi href="/about">About</NavLi>
     <NavLi href="/docs/components/navbar">Navbar</NavLi>
     <NavLi href="/pricing">Pricing</NavLi>
