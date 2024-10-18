@@ -35,6 +35,18 @@ h1 {
   line-height: 1.1;
 }
 
+.robo-ai {
+  font-weight: bold;
+  color: ghostwhite;
+  padding: 20px;
+}
+
+.time-remaining {
+  color: black;
+  font-size: bold;
+  font-style: italic;
+}
+
 input, textarea {
   color: var(--text-color);
   background-color: #ffffff;

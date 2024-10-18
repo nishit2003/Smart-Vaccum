@@ -43,12 +43,9 @@
 
 <!-- Main content starts below the navbar -->
 <main class="mt-16">
-  <!-- {#if !loggedIn} -->
-    <!-- <Login on:login="{onLoginSuccess}"></Login> -->
-  <!-- {:else} -->
-    <h1>Welcome, {user.name}!</h1>
-    <p>Thank you for logging in, {user.username}.</p>
+  <h1 class="robo-ai"> Welcome RoboAI's Loyal Member! </h1>
+  <h5 class="robo-ai"> Thank you for logging in! </h5>
 
-    <Timer />
-  <!-- {/if} -->
+  <Timer />
 </main>
+
