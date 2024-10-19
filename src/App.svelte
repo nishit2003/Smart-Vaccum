@@ -1,7 +1,7 @@
 <script>
-  import Timer from './components/Timer.svelte';
-  import Login from './components/Login.svelte';
-  import Navbar from './components/Navbar.svelte';
+  import Timer from "./components/timer.svelte";
+  import Login from "./components/login.svelte";
+  import Navbar from "./components/navbar.svelte";
   import "./app.css";
   let user = { username: "", name: "" };
   let isDarkMode = false;
@@ -38,18 +38,13 @@
   </div>
 {:else}
   <!-- Show the main app content after the user logs in -->
-  <Navbar
-    {user}
-    {isDarkMode}
-    {toggleTheme}
-    {handleLogout}
-  />
+  <Navbar {user} {isDarkMode} {toggleTheme} {handleLogout} />
 
   <main class="mt-16">
-    <h1 class="robo-ai">   Hello {user.name} {user.username} !                       </h1>
-    <h5 class="robo-ai">      Thank you for logging in!</h5>
+    <h1 class="robo-ai">Hello {user.name} {user.username} !</h1>
+    <h5 class="robo-ai">Thank you for logging in!</h5>
 
-    <div class=t-box>
+    <div class="t-box">
       <Timer {isDarkMode} />
     </div>
   </main>
