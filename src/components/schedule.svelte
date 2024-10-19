@@ -9,10 +9,6 @@
     { day: "Friday", time: "12:00 PM" },
   ];
 
-  const toggleScheduleModal = () => {
-    showScheduleModal = !showScheduleModal;
-  };
-
   // Function to add a new schedule
   const addSchedule = () => {
     schedule = [...schedule, { day: "", time: "" }];
@@ -25,20 +21,20 @@
 </script>
 
 <!-- Modal for scheduling -->
-<Modal open={showScheduleModal} on:close={toggleScheduleModal} placement="center">
+<Modal open={showScheduleModal} on:close={() => (showScheduleModal = false)} placement="center">
   <div class="modal-content">
     <h2 class="schedule-title">Schedule Cleaning</h2>
     <div class="schedule-list">
       {#each schedule as { day, time }, index}
         <div class="schedule-item">
-          <input type="text" bind:value={day} placeholder="Day" class="day-input" />
-          <input type="time" bind:value={time} class="time-input" />
+          <input type="text" bind:value={schedule[index].day} placeholder="Day" class="day-input" />
+          <input type="time" bind:value={schedule[index].time} class="time-input" />
           <Button color="red" on:click={() => removeSchedule(index)}>Remove</Button>
         </div>
       {/each}
     </div>
     <Button color="green" class="mt-4" on:click={addSchedule}>Add Schedule</Button>
-    <Button color="light" class="mt-4" on:click={toggleScheduleModal}>Close</Button>
+    <Button color="light" class="mt-4" on:click={() => (showScheduleModal = false)}>Close</Button>
   </div>
 </Modal>
 
