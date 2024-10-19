@@ -12,11 +12,17 @@
   } from "flowbite-svelte";
 
   import UserInfoButton from "./UserInfoButton.svelte"; // Import the new component
+  import Schedule from "./schedule.svelte"; // Import the new schedule component
 
   export let loggedIn = false;
   export let user = { username: "", name: "" };
   export let isDarkMode = false;
   export let toggleTheme;
+  let showScheduleModal = false;
+
+  function toggleScheduleModal() {
+    showScheduleModal = !showScheduleModal;
+  }
 </script>
 
 <!-- Navbar component -->
@@ -54,9 +60,12 @@
     </button>
   </div>
 
+  <!-- Schedule Modal -->
+<Schedule bind:showScheduleModal={showScheduleModal} />
+
   <NavUl>
     <NavLi href="/" activeClass="active">Home</NavLi>
-    <NavLi href="/about">Schedule</NavLi>
+    <NavLi on:click={toggleScheduleModal} style="cursor: pointer;">Schedule</NavLi>
     <NavLi href="/docs/components/navbar">History</NavLi>
     <NavLi href="/pricing">Map</NavLi>
     <NavLi href="/contact">Support</NavLi>
