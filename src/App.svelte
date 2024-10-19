@@ -23,11 +23,6 @@
     loggedIn = true; // Set loggedIn to true when login succeeds
   };
 
-  const handleLogout = () => {
-    loggedIn = false; // Set loggedIn to false when logged out
-    user = { username: "", name: "" };
-    alert("You have been logged out.");
-  };
 </script>
 
 <!-- Conditionally render the Login page or the main app content -->
@@ -38,7 +33,7 @@
   </div>
 {:else}
   <!-- Show the main app content after the user logs in -->
-  <Navbar {user} {isDarkMode} {toggleTheme} {handleLogout} />
+  <Navbar {user} {isDarkMode} {toggleTheme} />
 
   <main class="mt-16">
     <h1 class="robo-ai">Hello {user.name} {user.username} !</h1>

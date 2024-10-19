@@ -17,7 +17,6 @@
   export let user = { username: "", name: "" };
   export let isDarkMode = false;
   export let toggleTheme;
-  export let handleLogout;
 </script>
 
 <!-- Navbar component -->
@@ -41,7 +40,6 @@
         <DropdownItem>Dashboard</DropdownItem>
         <DropdownItem>Settings</DropdownItem>
         <DropdownDivider></DropdownDivider>
-        <DropdownItem on:click={handleLogout}>Sign out</DropdownItem>
       </Dropdown>
     {/if}
 
