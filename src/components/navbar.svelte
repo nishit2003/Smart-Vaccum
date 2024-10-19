@@ -13,11 +13,11 @@
 
   import UserInfoButton from "./UserInfoButton.svelte";
   import Schedule from "./schedule.svelte";
-  import History from "./history.svelte";
+  import History from "./History.svelte";
   import MapModal from "./map.svelte";
   import Support from "./support.svelte";
 
-  export let user = { username: "", name: "" };
+  export let user = { name: "", username: "" };
   export let isDarkMode = false;
   export let toggleTheme;
 
@@ -53,24 +53,25 @@
     </span>
   </NavBrand>
 
-  <div class="flex items-center md:order-2">
+  <div class="flex items-center md:order-2 gap-x-4" style="font-weight: bold;">
     <!-- User Info Button -->
-    <UserInfoButton />
+    <UserInfoButton {user}/>
 
     <!-- Theme Toggle Button -->
     <button
       on:click={toggleTheme}
       class="ml-3 p-2 bg-blue-500 text-white rounded-md"
+      style="background-color: {isDarkMode ? 'aqua' : 'navy'}; color: {isDarkMode ? 'navy' : 'ghostwhite'}"
     >
-      {isDarkMode ? "Light Mode" : "Dark Mode"}
+      {isDarkMode ? "Light Mode 🌝" : "Dark Mode 🌚"}
     </button>
 
     <!-- Avatar and Dropdown -->
     <Avatar id="avatar-menu" src="src/assets/10337609.png" />
     <Dropdown placement="bottom" triggeredBy="#avatar-menu">
       <DropdownHeader>
-        <span class="block text-sm">{user.name}</span>
-        <span class="block truncate text-sm font-medium">{user.username}</span>
+        <span class="block text-sm"><strong>{user.name}</strong></span>
+        <!-- <span class="block truncate text-sm font-medium">{user.username}</span> -->
       </DropdownHeader>
       <DropdownItem>Dashboard</DropdownItem>
       <DropdownItem>Settings</DropdownItem>
@@ -86,7 +87,7 @@
 
   <!-- Navbar Links -->
   <NavUl>
-    <NavLi href="/" activeClass="active">Home</NavLi>
+    <NavLi href="/" activeClass="active">Home/Exit</NavLi>
     <NavLi on:click={toggleScheduleModal} style="cursor: pointer;">Schedule</NavLi>
     <NavLi on:click={toggleHistoryModal} style="cursor: pointer;">History</NavLi>
     <NavLi on:click={toggleMapModal} style="cursor: pointer;">Map</NavLi>

@@ -1,28 +1,27 @@
-<script>
+  <script>
     import { createEventDispatcher } from 'svelte';
-    let username = '';
-    let name = '';
-  
+    
+    let firstName = '';
+    let lastName = '';
     const dispatch = createEventDispatcher();
-  
+    
     const handleLogin = () => {
-      if (username && name) {
+      if (firstName && lastName) {
         // Dispatch login event with user details
-        dispatch('login', { username, name });
+        dispatch('login', { name: `${firstName} ${lastName}`, username: `${firstName.toLowerCase()}${lastName.toLowerCase()}` });
       } else {
         alert('Please enter both your First Name and Last Name.');
       }
     };
   </script>
-  
-    <div class="box">
-        <!-- Login Box -->
-        <h2 class="h2-class" >Welcome RoboAI's Loyal Member!</h2>
-        <input type="text" bind:value={name} placeholder="Enter Your First Name" />
-        <input type="text" bind:value={username} placeholder="Enter Your Last Name" />
-        <button on:click={handleLogin}>RoboAi: Smart-Clean Living Starts Here...</button>
-    </div>
-  
+
+  <div class="box">
+    <!-- Login Box -->
+    <h2 class="h2-class">Welcome RoboAI's Loyal Member!</h2>
+    <input type="text" bind:value={firstName} placeholder="Enter Your First Name" />
+    <input type="text" bind:value={lastName} placeholder="Enter Your Last Name" />
+    <button on:click={handleLogin}>RoboAi: Smart-Clean Living Starts Here...</button>
+  </div>
   
   <style>
     .h2-class {

@@ -125,10 +125,10 @@
     padding: 1.5rem;
     text-align: left;
   }
-  .schedule-title {
+  /* .schedule-title {
     font-weight: bold;
     margin-bottom: 1rem;
-  }
+  } */
   .schedule-list {
     margin-bottom: 1rem;
   }

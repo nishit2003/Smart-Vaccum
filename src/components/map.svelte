@@ -60,7 +60,7 @@
     border: 1px solid #ccc;
     border-radius: 8px;
   }
-  .update-button {
+  /* .update-button {
     margin-left: 0.5rem;
   }
   .add-room-button {
@@ -68,5 +68,5 @@
     bottom: 1rem;
     right: 1rem;
     z-index: 100;
-  }
+  } */
 </style>
