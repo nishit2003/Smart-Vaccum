@@ -18,10 +18,11 @@
     "flowbite-svelte-icons": "^1.6.1",
     "svelte": "^4.2.18",
     "tailwindcss": "^3.4.9",
-    "vite": "^5.4.1"
+    "vite": "^5.4.9"
   },
   "dependencies": {
     "chart.js": "^4.4.5",
+    "i": "^0.3.7",
     "project2": "file:",
     "svelte-chartjs": "^3.1.5"
   }

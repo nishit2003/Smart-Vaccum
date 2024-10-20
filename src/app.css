@@ -37,10 +37,11 @@ h1 {
 
 .robo-ai {
   font-weight: bold;
-  color: #e6e6e6;
+  color: #000000; /* Black */
   padding: 20px;
   margin-left: 160px;
 }
+
 
 .time-remaining {
   color: black;

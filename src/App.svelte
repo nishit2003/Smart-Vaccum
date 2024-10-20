@@ -30,65 +30,127 @@
 {:else}
   <Navbar {user} {isDarkMode} {toggleTheme} />
 
-  <main class="mt-16">
-    <div class="header-control-container">
-      <!-- Hello message and control panel side by side -->
-      <div class="header-text">
-        <h1 class="robo-ai">Hello {user.name} !</h1>
-        <h5 class="robo-ai">Thank you for being with us!</h5>
+  <main class="main-content">
+    <div class="content-wrapper">
+      <div class="header-control-container">
+        <!-- Hello message and control panel side by side -->
+        <div class="header-text">
+          <h1 class="robo-ai">Hello {user.name}!</h1>
+          <h5 class="robo-ai">Thank you for being with us!</h5>
+        </div>
+
+        <!-- Control Panel in the same line as Hello message -->
+        <div class="control-box">
+          <ControlPanel />
+        </div>
       </div>
 
-      <!-- Control Panel in the same line as Hello message -->
-      <div class="control-box">
-        <ControlPanel />
+      <!-- Grid container for components -->
+      <div class="grid-container">
+        <div class="grid-item">
+          <Timer {isDarkMode} />
+        </div>
+        <div class="grid-item">
+          <BatteryStatus />
+        </div>
+        <div class="grid-item">
+          <CleaningStatus />
+        </div>
+        <div class="grid-item">
+          <!-- Placeholder or additional component -->
+          <p>Additional Info</p>
+        </div>
       </div>
-    </div>
-
-    <div class="t-box">
-      <Timer {isDarkMode} />
-    </div>
-
-    <!-- Battery status component -->
-    <div class="battery-box">
-      <BatteryStatus />
-    </div>
-
-    <div class="cleaning-box">
-      <CleaningStatus />
     </div>
   </main>
 {/if}
 
 <style>
-   /* Flexbox for aligning the header and control panel side by side */
+  /* Reset margins and paddings */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  /* Main content fills the viewport */
+  .main-content {
+    display: flex;
+    flex-direction: column;
+    padding-top: 60px; /* Adjust according to your Navbar height */
+  }
+
+  /* Wrapper to center content */
+  .content-wrapper {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* Header and control panel */
   .header-control-container {
     display: flex;
-    justify-content: space-between; /* Space between the text and control panel */
-    align-items: center; /* Vertically center-align */
-    padding: 10px 20px; /* Add some padding for spacing */
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #f0f0f0;
   }
 
   .header-text {
-    flex: 1; /* Make the text take up more space */
+    flex: 1;
   }
 
   .control-box {
-    flex-shrink: 0; /* Prevent the control panel from shrinking */
-  }
-
-  .t-box, .battery-box, .cleaning-box {
-    margin-left: 180px;
-    margin-top: 20px;
+    flex-shrink: 0;
   }
 
   h1.robo-ai {
-    font-size: 2em; /* Adjust the size of the Hello text */
-    margin: 0;
+    font-size: 2em;
+    margin-bottom: 10px;
   }
 
   h5.robo-ai {
-    margin: 0;
     font-weight: normal;
-    color: #666; /* Softer color for the subheading */
+    color: #666;
+  }
+
+  /* Grid container styles */
+  .grid-container {
+    flex: 1;
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* 2 columns */
+    grid-template-rows: 1fr 1fr;    /* 2 rows */
+    gap: 20px;
+    padding: 20px;
+    background-color: #eaeaea;
+  }
+
+  .grid-item {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* Optional shadow */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  /* Dark mode adjustments */
+  [data-theme="dark"] .header-control-container {
+    background-color: #222;
+  }
+
+  [data-theme="dark"] .grid-container {
+    background-color: #333;
+  }
+
+  [data-theme="dark"] .grid-item {
+    background-color: #444;
+    color: #fff;
   }
 </style>
