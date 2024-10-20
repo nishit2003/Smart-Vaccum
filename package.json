@@ -22,11 +22,8 @@
   },
   "dependencies": {
     "chart.js": "^4.4.5",
-<<<<<<< HEAD
     "i": "^0.3.7",
-=======
     "leaflet": "^1.9.4",
->>>>>>> 6b2db66471743bbe3fa313254c15f8ccfb8d2592
     "project2": "file:",
     "svelte-chartjs": "^3.1.5"
   }
