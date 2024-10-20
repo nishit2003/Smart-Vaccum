@@ -31,6 +31,7 @@
   const toggleModal = () => {
     showModal = !showModal;
   };
+
 </script>
 
 <!-- Button to open the modal -->
@@ -69,10 +70,12 @@
           <li class="instruction-item">Press 'Return to Dock' to send the vacuum back to its charging station.</li>
     </ul>
 
+  <!-- <Button color="light" class="mt-4" on:click={() => (showModal = false)}>Close</Button> -->
+
     <!-- Close Button -->
-    <div class="close-modal-btn">  
+    <!-- <div class="close-modal-btn">  
       <Button color="light" on:click={toggleModal}>Close</Button>
-    </div>
+    </div> -->
 
   </div>
 </Modal>
@@ -103,9 +106,9 @@
     margin-bottom: 1.5rem;
   }
 
-  .close-modal-btn {
+  /* .close-modal-btn {
     margin-top: 1rem;
-  }
+  } */
 
   p {
     font-size: 1.2rem;

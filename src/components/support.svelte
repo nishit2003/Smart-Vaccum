@@ -45,23 +45,54 @@
 
 <style>
   .modal-content {
-    padding: 1.5rem;
-    text-align: left;
+    /* padding: 1.5rem;
+    text-align: left; */
+    padding: 2rem;
+    text-align: center;
+    background: linear-gradient(145deg, #ff4d4d, #ff4d4d);
+    border-radius: 20px;
+    box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.2), -6px -6px 12px rgba(255, 255, 255, 0.5);
   }
   .support-title {
+    /* font-weight: bold;
+    margin-bottom: 1rem; */
+    font-size: 2rem;
+    color: ghostwhite;
     font-weight: bold;
     margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
   }
   .faq-list {
-    margin-bottom: 2rem;
+    /* margin-bottom: 2rem; */
+    list-style-type: none;
+    color: navy;
+    padding: 0;
+    margin: 0;
+    margin-bottom: 1.5rem;
   }
   .faq-item {
-    margin-bottom: 1rem;
+    /* margin-bottom: 1rem; */
+    font-size: 1.1rem;
+    margin-bottom: 0.7rem;
+    padding: 0.7rem;
+    background: aqua;
+    border-radius: 10px;
+    box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.1), -3px -3px 6px rgba(255, 255, 255, 0.5);
+    transition: transform 0.3s;
   }
+
+  .faq-item:hover {
+    transform: translateY(-3px);
+  }
+
   .faq-question {
+    text-align: left;
     font-weight: bold;
+    font-family: Georgia, 'Times New Roman', Times, serif;
   }
   .faq-answer {
+    text-align: left;
+    font-family: Georgia, 'Times New Roman', Times, serif;
     margin-top: 0.5rem;
   }
 </style>

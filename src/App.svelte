@@ -35,22 +35,63 @@
       <!-- Grid container for components -->
       <div class="grid-container">
         <!-- Greeting message grid item -->
-        <div class="grid-item greeting-item">
+        <div class="grid-item greeting-item" class:is-dark={isDarkMode} class:is-light={!isDarkMode}>
           <div class="header-text">
-            <h1 class="robo-ai">Hello {user.name}!</h1>
-            <h5 class="robo-ai">Thank you for being with us!</h5>
+
+            <!-- <h1 class="robo-ai" style="color: #FF10F0;">Hello {user.name}!</h1>
+            <h5 class="robo-ai" style="color: #FF10F0;">Thank you for being with us!</h5> -->
+
+            <h1>Hello {user.name} !</h1>
+            <h6 style="font-style: italic;">Thank you for being with us!</h6>
+
+            <!-- <h1 
+              class="robo-ai" 
+              style="
+                font-size: 2em; 
+                font-weight: bold; 
+                background: linear-gradient(to right, red, violet); 
+                background-size: 400%; 
+                -webkit-background-clip: text; 
+                color: transparent; 
+                animation: simpleColorWave 3s linear infinite;
+              ">
+              Hello {user.name}!
+            </h1>
+
+            <h5 
+              class="robo-ai" 
+              style="
+                font-size: 1.5em; 
+                font-weight: bold; 
+                background: linear-gradient(to right, red, ghostwhite, magenta); 
+                background-size: 400%; 
+                -webkit-background-clip: text; 
+                color: transparent; 
+                animation: simpleColorWave 3s linear infinite;
+              ">
+              Thank you for being with us!
+            </h5> -->
+
+
+            <!-- <h1 class="robo-ai" style="color: {isDarkMode ? 'ghostwhite' : 'navy'};">
+              Hello {user.name}!
+            </h1>
+            <h5 class="robo-ai" style="color: {isDarkMode ? 'ghostwhite' : 'navy'};">
+              Thank you for being with us!
+            </h5> -->
+
           </div>
         </div>
-        <div class="grid-item">
+        <div class="grid-item" class:is-dark={isDarkMode} class:is-light={!isDarkMode}>
           <Timer {isDarkMode} />
         </div>
-        <div class="grid-item">
+        <div class="grid-item" class:is-dark={isDarkMode} class:is-light={!isDarkMode}>
           <BatteryStatus />
         </div>
-        <div class="grid-item">
+        <div class="grid-item" class:is-dark={isDarkMode} class:is-light={!isDarkMode}>
           <CleaningStatus />
         </div>
-        <div class="grid-item">
+        <div class="grid-item" class:is-dark={isDarkMode} class:is-light={!isDarkMode}>
           <ControlPanel />
         </div>
       </div>
@@ -66,10 +107,20 @@
     box-sizing: border-box;
   }
 
+  /* @keyframes simpleColorWave {
+  0% {
+    background-position: 0%;
+  }
+  100% {
+    background-position: 100%;
+  }
+} */
+
   /* Main content fills the viewport */
   .main-content {
     display: flex;
     flex-direction: column;
+    margin-left: 11px;
     padding-top: 60px; /* Adjust according to your Navbar height */
   }
 
@@ -95,6 +146,7 @@
 
   /* Make the greeting message span two columns */
   .greeting-item {
+    color: ghostwhite;
     grid-column: 1 / -1; /* Spans from column 1 to the end */
     background-color: #ffffff;
     padding: 20px;
@@ -109,7 +161,8 @@
   }
 
   .grid-item {
-    background-color: #ffffff;
+    /* background-color: #ff4d4d; */
+    color: ghostwhite;
     padding: 20px;
     border-radius: 8px;
     box-sizing: border-box;
@@ -120,21 +173,23 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   }
 
-  h1.robo-ai {
-    font-size: 2em;
-    margin-bottom: 10px;
-    color: #333333; /* Darker color for visibility */
+  /* Light and dark mode grid item styles */
+  .grid-item.is-light {
+    background-color: aqua;
+    color: navy !important;
+    font-weight: bold;
+    font-family: Georgia, Times, "Times New Roman", serif;
   }
 
-  h5.robo-ai {
-    margin: 0;
-    font-size: 1.5em;
-    font-weight: normal;
-    color: #666;
+  .grid-item.is-dark {
+    background-color: navy;
+    color: ghostwhite !important;
+    font-weight: bold;
+    font-family: Georgia, Times, "Times New Roman", serif;
   }
 
   /* Dark mode adjustments */
-  [data-theme="dark"] .grid-container {
+  /* [data-theme="dark"] .grid-container {
     background-color: #333;
   }
 
@@ -142,5 +197,5 @@
   [data-theme="dark"] .greeting-item {
     background-color: #444;
     color: #fff;
-  }
+  } */
 </style>

@@ -50,6 +50,16 @@
 <!-- Modal for Location -->
 {#if showModal}
   <div class="modal-overlay" on:click={closeModal}>
+
+  <!-- <div 
+    class="modal-overlay" 
+      on:click={closeModal} 
+        on:keydown={event => event.key === 'Enter' && closeModal()} 
+        tabindex="0" 
+        role="button" 
+        aria-label="Close Modal"
+  > -->
+
     <div class="modal" on:click|stopPropagation>
       <h3>Your Vacuum's Current Location</h3>
       <div class="house-outline">
