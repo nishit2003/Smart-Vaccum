@@ -190,12 +190,12 @@
 
   /* Dark mode adjustments */
   [data-theme="dark"] .grid-container {
-    background-color: #333;
+    background-color: navy;
   }
 
   :global([data-theme="dark"]) .grid-item,
   :global([data-theme="dark"]) .greeting-item {
-    background-color: #444;
+    background-color: navy;
     color: #fff;
   }
 </style>
