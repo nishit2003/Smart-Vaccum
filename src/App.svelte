@@ -85,20 +85,33 @@
     flex-direction: column;
   }
 
-  /* Header */
-  .header-container {
-    padding: 20px;
-    background-color: #f0f0f0;
-    text-align: center; /* Center the header text */
+  /* Header and control panel */
+  .header-control-container {
+    display: flex;
+    justify-content: flex-end; /* Space between the text and control panel */
+    align-items: center; /* Vertically center-align */
+    padding: 10px 20px; /* Add some padding for spacing */
+    margin-left: 400px;
+  }
+
+  .header-text {
+    flex: 1;
+  }
+
+  .control-box {
+    flex-shrink: 0;
   }
 
   h1.robo-ai {
-    font-size: 2em;
-    margin-bottom: 10px;
+    font-size: 3em; /* Adjust the size of the Hello text */
+    margin: 0;
+    color: blue;
     color: #333333; /* Darker color for visibility */
   }
 
   h5.robo-ai {
+    margin: 0;
+    font-size: 2em;
     font-weight: normal;
     color: #666;
   }
