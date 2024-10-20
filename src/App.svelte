@@ -1,4 +1,5 @@
 <script>
+	// import { color } from './../node_modules/flowbite-svelte-icons/dist/CartPlusSolid.svelte.d.ts';
   import Timer from "./components/timer.svelte";
   import Login from "./components/login.svelte";
   import Navbar from "./components/navbar.svelte";
@@ -63,9 +64,10 @@
    /* Flexbox for aligning the header and control panel side by side */
   .header-control-container {
     display: flex;
-    justify-content: space-between; /* Space between the text and control panel */
+    justify-content: flex-end; /* Space between the text and control panel */
     align-items: center; /* Vertically center-align */
     padding: 10px 20px; /* Add some padding for spacing */
+    margin-left: 400px;
   }
 
   .header-text {
@@ -82,12 +84,14 @@
   }
 
   h1.robo-ai {
-    font-size: 2em; /* Adjust the size of the Hello text */
+    font-size: 3em; /* Adjust the size of the Hello text */
     margin: 0;
+    color: blue
   }
 
   h5.robo-ai {
     margin: 0;
+    font-size: 2em;
     font-weight: normal;
     color: #666; /* Softer color for the subheading */
   }
