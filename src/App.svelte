@@ -189,13 +189,13 @@
   }
 
   /* Dark mode adjustments */
-  /* [data-theme="dark"] .grid-container {
+  [data-theme="dark"] .grid-container {
     background-color: #333;
   }
 
-  [data-theme="dark"] .grid-item,
-  [data-theme="dark"] .greeting-item {
+  :global([data-theme="dark"]) .grid-item,
+  :global([data-theme="dark"]) .greeting-item {
     background-color: #444;
     color: #fff;
-  } */
+  }
 </style>
