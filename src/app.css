@@ -10,13 +10,19 @@
   font-weight: 400;
 
   color-scheme: light dark;
-  --text-color: rgba(255, 255, 255, 0.87); /* Text color for dark mode */
-  --background-color: #c29999;
+  --text-color: rgba(12, 12, 12, 0.87); /* Text color for light mode */
+  --background-color: #ffffff;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+/* Dark mode variables */
+[data-theme="dark"] {
+  --text-color: rgba(255, 255, 255, 0.87);
+  --background-color: #2d2d2d;
 }
 
 body {
@@ -30,6 +36,12 @@ body {
   color: var(--text-color);
 }
 
+/* Override background in dark mode */
+[data-theme="dark"] body {
+  background-color: var(--background-color); /* Remove or change background image */
+  color: var(--text-color);
+}
+
 h1 {
   font-size: 3.2em;
   line-height: 1.1;
@@ -37,37 +49,30 @@ h1 {
 
 .robo-ai {
   font-weight: bold;
-  color: #000000; /* Black */
+  color: var(--text-color);
   padding: 20px;
   margin-left: 160px;
 }
 
-
 .time-remaining {
   color: black;
-  font-size: bold;
+  font-weight: bold;
   font-style: italic;
+}
+
+/* Adjust time-remaining color in dark mode */
+[data-theme="dark"] .time-remaining {
+  color: var(--text-color);
 }
 
 input,
 textarea {
-  color: black; /* Explicitly set a color for input text */
+  color: black;
   background-color: #ffffff;
   border: 1px solid #ccc;
   padding: 0.5em;
   border-radius: 4px;
   width: 100%;
-}
-
-/* Dark mode settings */
-[data-theme="dark"] {
-  --text-color: rgba(255, 255, 255, 0.87);
-  --background-color: #2d2d2d;
-}
-
-[data-theme="dark"] body {
-  background-color: var(--background-color);
-  color: var(--text-color);
 }
 
 [data-theme="dark"] input,
@@ -86,6 +91,7 @@ button {
   font-weight: 500;
   font-family: inherit;
   background-color: #1a1a1a;
+  color: white;
   cursor: pointer;
   transition: border-color 0.25s;
 }
@@ -97,6 +103,27 @@ button:hover {
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
+}
+
+/* Adjust button styling in dark mode */
+[data-theme="dark"] button {
+  background-color: #444;
+  color: white;
+}
+
+/* Dark mode adjustments for grid and greeting */
+[data-theme="dark"] .grid-container {
+  background-color: #333;
+}
+
+[data-theme="dark"] .grid-item,
+[data-theme="dark"] .greeting-item {
+  background-color: #444;
+  color: #fff;
+}
+
+[data-theme="dark"] .robo-ai {
+  color: #fff;
 }
 
 /* Light mode settings */
@@ -117,5 +144,6 @@ button:focus-visible {
 
   button {
     background-color: #f9f9f9;
+    color: black;
   }
 }

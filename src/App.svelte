@@ -134,13 +134,21 @@
   }
 
   /* Dark mode adjustments */
-  [data-theme="dark"] .grid-container {
+  :global([data-theme="dark"]) .grid-container {
     background-color: #333;
   }
 
-  [data-theme="dark"] .grid-item,
-  [data-theme="dark"] .greeting-item {
+  :global([data-theme="dark"]) .grid-item,
+  :global([data-theme="dark"]) .greeting-item {
     background-color: #444;
     color: #fff;
+  }
+
+  :global([data-theme="dark"]) h1.robo-ai {
+    color: #fff;
+  }
+
+  :global([data-theme="dark"]) h5.robo-ai {
+    color: #ddd;
   }
 </style>
