@@ -1,5 +1,4 @@
 <script>
-	// import { color } from './../node_modules/flowbite-svelte-icons/dist/CartPlusSolid.svelte.d.ts';
   import Timer from "./components/timer.svelte";
   import Login from "./components/login.svelte";
   import Navbar from "./components/navbar.svelte";
@@ -33,16 +32,11 @@
 
   <main class="main-content">
     <div class="content-wrapper">
-      <div class="header-control-container">
-        <!-- Hello message and control panel side by side -->
+      <div class="header-container">
+        <!-- Hello message -->
         <div class="header-text">
           <h1 class="robo-ai">Hello {user.name}!</h1>
           <h5 class="robo-ai">Thank you for being with us!</h5>
-        </div>
-
-        <!-- Control Panel in the same line as Hello message -->
-        <div class="control-box">
-          <ControlPanel />
         </div>
       </div>
 
@@ -58,8 +52,8 @@
           <CleaningStatus />
         </div>
         <div class="grid-item">
-          <!-- Placeholder or additional component -->
-          <p>Additional Info</p>
+          <!-- Control Panel now placed here -->
+          <ControlPanel />
         </div>
       </div>
     </div>
@@ -91,26 +85,17 @@
     flex-direction: column;
   }
 
-  /* Header and control panel */
-  .header-control-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  /* Header */
+  .header-container {
     padding: 20px;
     background-color: #f0f0f0;
-  }
-
-  .header-text {
-    flex: 1;
-  }
-
-  .control-box {
-    flex-shrink: 0;
+    text-align: center; /* Center the header text */
   }
 
   h1.robo-ai {
     font-size: 2em;
     margin-bottom: 10px;
+    color: #333333; /* Darker color for visibility */
   }
 
   h5.robo-ai {
@@ -142,7 +127,7 @@
   }
 
   /* Dark mode adjustments */
-  [data-theme="dark"] .header-control-container {
+  [data-theme="dark"] .header-container {
     background-color: #222;
   }
 
