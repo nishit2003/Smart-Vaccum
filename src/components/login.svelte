@@ -17,7 +17,7 @@
 
   <div class="box">
     <!-- Login Box -->
-    <h2 class="h2-class">Welcome RoboAI's Loyal Member!</h2>
+    <h2 class="h2-class">Welcome iVaccum's Loyal Member!</h2>
     <input type="text" bind:value={firstName} placeholder="Enter Your First Name" />
     <input type="text" bind:value={lastName} placeholder="Enter Your Last Name" />
     <button on:click={handleLogin}>RoboAi: Smart-Clean Living Starts Here...</button>
