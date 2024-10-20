@@ -94,17 +94,10 @@
   /* Header and control panel */
   .header-control-container {
     display: flex;
-<<<<<<< HEAD
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
-    background-color: #f0f0f0;
-=======
     justify-content: flex-end; /* Space between the text and control panel */
     align-items: center; /* Vertically center-align */
     padding: 10px 20px; /* Add some padding for spacing */
     margin-left: 400px;
->>>>>>> 6b2db66471743bbe3fa313254c15f8ccfb8d2592
   }
 
   .header-text {
@@ -116,13 +109,6 @@
   }
 
   h1.robo-ai {
-<<<<<<< HEAD
-    font-size: 2em;
-    margin-bottom: 10px;
-  }
-
-  h5.robo-ai {
-=======
     font-size: 3em; /* Adjust the size of the Hello text */
     margin: 0;
     color: blue
@@ -131,7 +117,6 @@
   h5.robo-ai {
     margin: 0;
     font-size: 2em;
->>>>>>> 6b2db66471743bbe3fa313254c15f8ccfb8d2592
     font-weight: normal;
     color: #666;
   }
