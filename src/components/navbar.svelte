@@ -73,8 +73,7 @@
         <span class="block text-sm"><strong>{user.name}</strong></span>
         <!-- <span class="block truncate text-sm font-medium">{user.username}</span> -->
       </DropdownHeader>
-      <DropdownItem>Dashboard</DropdownItem>
-      <DropdownItem>Settings</DropdownItem>
+      
       <DropdownDivider></DropdownDivider>
     </Dropdown>
   </div>
