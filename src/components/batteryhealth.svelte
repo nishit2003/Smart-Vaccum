@@ -8,7 +8,7 @@
   };
 
   // Update battery status every 5 seconds
-  setInterval(updateBatteryStatus, 5000);
+  // setInterval(updateBatteryStatus, 5000);
 </script>
 
 <!-- Display battery status -->

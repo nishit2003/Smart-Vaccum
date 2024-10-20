@@ -4,6 +4,7 @@
   import Navbar from "./components/navbar.svelte";
   import BatteryStatus from "./components/batteryhealth.svelte";
   import CleaningStatus from "./components/cleaningstatus.svelte";
+  import ControlPanel from "./components/ControlPanel.svelte";
   import "./app.css";
 
   let user = { username: "", name: "" };
@@ -30,8 +31,18 @@
   <Navbar {user} {isDarkMode} {toggleTheme} />
 
   <main class="mt-16">
-    <h1 class="robo-ai">Hello {user.name} !</h1>
-    <h5 class="robo-ai">Thank you for being with us!</h5>
+    <div class="header-control-container">
+      <!-- Hello message and control panel side by side -->
+      <div class="header-text">
+        <h1 class="robo-ai">Hello {user.name} !</h1>
+        <h5 class="robo-ai">Thank you for being with us!</h5>
+      </div>
+
+      <!-- Control Panel in the same line as Hello message -->
+      <div class="control-box">
+        <ControlPanel />
+      </div>
+    </div>
 
     <div class="t-box">
       <Timer {isDarkMode} />
@@ -49,11 +60,35 @@
 {/if}
 
 <style>
-  .t-box {
-    margin-left: 180px;
+   /* Flexbox for aligning the header and control panel side by side */
+  .header-control-container {
+    display: flex;
+    justify-content: space-between; /* Space between the text and control panel */
+    align-items: center; /* Vertically center-align */
+    padding: 10px 20px; /* Add some padding for spacing */
   }
-  .battery-box , .cleaning-box{
+
+  .header-text {
+    flex: 1; /* Make the text take up more space */
+  }
+
+  .control-box {
+    flex-shrink: 0; /* Prevent the control panel from shrinking */
+  }
+
+  .t-box, .battery-box, .cleaning-box {
     margin-left: 180px;
     margin-top: 20px;
+  }
+
+  h1.robo-ai {
+    font-size: 2em; /* Adjust the size of the Hello text */
+    margin: 0;
+  }
+
+  h5.robo-ai {
+    margin: 0;
+    font-weight: normal;
+    color: #666; /* Softer color for the subheading */
   }
 </style>

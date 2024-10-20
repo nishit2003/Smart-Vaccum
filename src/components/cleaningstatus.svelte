@@ -8,7 +8,7 @@
   };
 
   // Update dirt level every 5 seconds
-  setInterval(updateDirtLevel, 5000);
+  // setInterval(updateDirtLevel, 5000);
 </script>
 
 <!-- Display cleaning status -->
