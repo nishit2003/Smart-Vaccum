@@ -1,20 +1,20 @@
 <script>
-  import Timer from "./components/Timer.svelte";
-  import Login from "./components/Login.svelte";
+  import Timer from "./components/timer.svelte";
+  import Login from "./components/login.svelte";
   import Navbar from "./components/navbar.svelte";
+  import BatteryStatus from "./components/batteryhealth.svelte";
+  import CleaningStatus from "./components/cleaningstatus.svelte";
   import "./app.css";
 
   let user = { username: "", name: "" };
   let isDarkMode = false;
   let isLoggedIn = false;
 
-  // Handle login and update user information
   const handleLogin = (event) => {
-    user = event.detail; // Update user details from the login component
-    isLoggedIn = true; // Set the login state to true
+    user = event.detail;
+    isLoggedIn = true;
   };
 
-  // Toggle theme
   const toggleTheme = () => {
     isDarkMode = !isDarkMode;
     document.documentElement.setAttribute(
@@ -25,10 +25,8 @@
 </script>
 
 {#if !isLoggedIn}
-  <!-- Login Component -->
   <Login on:login={handleLogin} />
 {:else}
-  <!-- Main app content after login -->
   <Navbar {user} {isDarkMode} {toggleTheme} />
 
   <main class="mt-16">
@@ -38,11 +36,24 @@
     <div class="t-box">
       <Timer {isDarkMode} />
     </div>
+
+    <!-- Battery status component -->
+    <div class="battery-box">
+      <BatteryStatus />
+    </div>
+
+    <div class="cleaning-box">
+      <CleaningStatus />
+    </div>
   </main>
 {/if}
 
 <style>
   .t-box {
     margin-left: 180px;
+  }
+  .battery-box , .cleaning-box{
+    margin-left: 180px;
+    margin-top: 20px;
   }
 </style>

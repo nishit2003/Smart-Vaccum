@@ -8,20 +8,20 @@
   export let isDarkMode = false;
 
   const startTimer = () => {
-    if (timeInput > 0) {
-      timeRemaining = timeInput;
-      timerStarted = true;
-      timerInterval = setInterval(() => {
-        if (timeRemaining > 0) {
-          timeRemaining -= 1;
-        } else {
-          clearInterval(timerInterval);
-          alert('Time is up!');
-          timerStarted = false;
-        }
-      }, 1000);
-    }
-  };
+  if (timeInput > 0) {
+    timeRemaining = timeInput * 60; // Convert timeInput (in minutes) to seconds
+    timerStarted = true;
+    timerInterval = setInterval(() => {
+      if (timeRemaining > 0) {
+        timeRemaining -= 1; // Decrease the time by 1 second
+      } else {
+        clearInterval(timerInterval);
+        alert('Time is up!');
+        timerStarted = false;
+      }
+    }, 1000); // Execute every second, but timeRemaining is in seconds now
+  }
+};
 
   const handleUserResponse = (response) => {
     askToStart = response;
@@ -38,13 +38,13 @@
 
 <div class="box">
   {#if !askToStart && !timerStarted}
-    <p>Do you want to start the timer?</p>
+    <p>Do you want to start the timed cleaning?</p>
     <button on:click={() => handleUserResponse(true)}>Yes</button>
     <button on:click={() => handleUserResponse(false)}>No</button>
   {/if}
 
   {#if askToStart && !timerStarted}
-    <p>Enter the time for the timer (in seconds):</p>
+    <p>Enter the time for the timer (in minutes):</p>
     <input type="number" bind:value={timeInput} min="1" />
     <button on:click={startTimer}>Start Timer</button>
   {/if}
