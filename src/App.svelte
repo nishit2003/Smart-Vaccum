@@ -173,7 +173,7 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   }
 
-  /* Light and dark mode grid item styles */
+  /* Light and dark mode grid item styles for better UI view */
   .grid-item.is-light {
     background-color: aqua;
     color: navy !important;
