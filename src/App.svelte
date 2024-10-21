@@ -62,7 +62,7 @@
     </div>
   </main>
 
-  <div class="control-panel">
+  <div class="control-panel" class:is-dark={isDarkMode} class:is-light={!isDarkMode}>
     <ControlPanel />
     <Timer/>
   </div>
@@ -153,6 +153,8 @@
     background-color: #333;
     color: #f0f0f0;
   }
+
+  
 
   /* Control panel styles */
   .control-panel {
