@@ -1,13 +1,20 @@
 <script>
   import { Modal, Button } from "flowbite-svelte";
+  
+  // Import images
+  import kitchenImage from "../assets/kitchen.png";
+  import livingImage from "../assets/living.png";
+  import bathroomImage from "../assets/bathroom.png";
+  import bedroomImage from "../assets/bedroo.png";  // Make sure the path is correct
+
   export let showMapModal = false;
 
   // Room data
   let rooms = [
-    { name: "Kitchen", image: "src/assets/kitchen.png" },
-    { name: "Living Room", image: "src/assets/living.png" },
-    { name: "Bathroom", image: "src/assets/bathroom.png" },
-    { name: "Bedroom", image: "src/assets/bedroo.png" },
+    { name: "Kitchen", image: kitchenImage },
+    { name: "Living Room", image: livingImage },
+    { name: "Bathroom", image: bathroomImage },
+    { name: "Bedroom", image: bedroomImage },
   ];
 
   // Function to add a new room

@@ -17,6 +17,9 @@
   import MapModal from "./map.svelte";
   import Support from "./support.svelte";
 
+  // Import avatar image
+  import avatarImage from "../assets/10337609.png";
+
   export let user = { name: "", username: "" };
   export let isDarkMode = false;
   export let toggleTheme;
@@ -67,7 +70,7 @@
     </button>
 
     <!-- Avatar and Dropdown -->
-    <Avatar id="avatar-menu" src="src/assets/10337609.png" />
+    <Avatar id="avatar-menu" src={avatarImage} />
     <Dropdown placement="bottom" triggeredBy="#avatar-menu">
       <DropdownHeader>
         <span class="block text-sm"><strong>{user.name}</strong></span>
