@@ -4,13 +4,13 @@
   // Functions for Start/Stop
   const start = () => {
     isRunning = true;
-    console.log("Vacuum started!");
-  };
+    alert("Vacuum started! 🌀");
+};
 
   const stop = () => {
     isRunning = false;
-    console.log("Vacuum stopped!");
-  };
+    alert("Vacuum stopped! ✋");
+};
 </script>
 
 <!-- Simple Control panel with Start and Stop buttons -->

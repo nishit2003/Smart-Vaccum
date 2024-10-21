@@ -6,16 +6,16 @@
   // Functions for Start/Stop/Dock
   const start = () => {
     isRunning = true;
-    console.log("Vacuum started!");
-  };
+    alert("Vacuum started! 🌀");
+};
 
   const stop = () => {
     isRunning = false;
-    console.log("Vacuum stopped!");
-  };
+    alert("Vacuum stopped! ✋");
+};
 
   const returnToDock = () => {
-    console.log("Returning to dock...");
+    alert("Returning to dock...");
   };
 
   // Function to show the location modal
