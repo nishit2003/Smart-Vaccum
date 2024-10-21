@@ -45,7 +45,7 @@
     <h1 class="info-title">User Information</h1>
     <div class="info-box">
       <p><strong>Name:</strong> {user.name}</p>
-      <p><strong>Username:</strong> {user.username}</p>
+      <p><strong>User-ID:</strong> {user.username}</p>
     </div>
     <br />
     <h1 class="info-title">Device Information</h1>
