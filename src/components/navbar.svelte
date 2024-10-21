@@ -61,7 +61,7 @@
     <button
       on:click={toggleTheme}
       class="ml-3 p-2 bg-blue-500 text-white rounded-md"
-      style="background-color: {isDarkMode ? 'aqua' : 'navy'}; color: {isDarkMode ? 'navy' : 'ghostwhite'}; font-weight: bold;"
+      style="background-color: {isDarkMode ? '#baf7ef' : 'navy'}; color: {isDarkMode ? 'navy' : 'ghostwhite'}; font-weight: bold;"
     >
       {isDarkMode ? "Light Mode 🌝" : "Dark Mode 🌚"}
     </button>
