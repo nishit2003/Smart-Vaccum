@@ -112,7 +112,7 @@ button:focus-visible {
 
 /* Adjust button styling in dark mode */
 [data-theme="dark"] button {
-  background-color: #444;
+  background-color: navy;
   color: white;
 }
 
