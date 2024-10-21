@@ -44,7 +44,7 @@
   {/if}
 
   {#if askToStart && !timerStarted}
-    <p>Enter the time for the timer (in minutes):</p>
+    <p style="font-weight: bold; font-family:Georgia, 'Times New Roman', Times, serif;">Enter the time for the timer (in minutes):</p>
     <input type="number" bind:value={timeInput} min="1" />
     <button on:click={startTimer}>Start Timer</button>
   {/if}
