@@ -36,7 +36,7 @@
   });
 </script>
 
-<div class="box">
+<div class="box" class:is-dark={isDarkMode} class:is-light={!isDarkMode}>
   {#if !askToStart && !timerStarted}
     <p>Do you want to start the timed cleaning?</p>
     <button on:click={() => handleUserResponse(true)}>Yes</button>
@@ -67,6 +67,17 @@
     margin: 2em auto;
     text-align: center;
     transition: transform 0.3s ease;
+  }
+
+  /* Light and dark mode grid item styles */
+  .box.is-light {
+    background-color: #f0f0f0;
+    color: #333;
+  }
+
+  .box.is-dark {
+    background-color: #333;
+    color: #f0f0f0;
   }
 
   .timer-box.light {

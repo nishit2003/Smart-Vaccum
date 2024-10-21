@@ -62,9 +62,9 @@
         <li  class="instruction-item">{instruction}</li>
       {/each} -->
           <li class="instruction-item">Press the 'Start' button to begin a cleaning session.</li>
-          <li class="instruction-item">Press the 'Stop' button to stop the cleaning.</li>
-          <li class="instruction-item">Press the 'Timer' button to start a timed cleaning session.</li>
-          <li class="instruction-item">Use the 'Suction' button to adjust the vacuum power.</li>
+          <li class="instruction-item">Press the 'Stop' button to stop the cleaning session.</li>
+          <li class="instruction-item">Press the 'Timer' button to start a timed-cleaning session.</li>
+          <li class="instruction-item">Use the 'Suction' button to adjust the vacuum's power.</li>
           <li class="instruction-item">Check the battery status on the top right of the UI.</li>
           <li class="instruction-item">Use 'Schedule' to set a recurring cleaning time.</li>
           <li class="instruction-item">Press 'Return to Dock' to send the vacuum back to its charging station.</li>
