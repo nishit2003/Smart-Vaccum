@@ -47,7 +47,13 @@
 
 <!-- Modal for Location -->
 {#if showModal}
+  <!-- svelte-ignore a11y-click-events-have-key-events -->
+  <!-- svelte-ignore a11y-click-events-have-key-events -->
+  <!-- svelte-ignore a11y-no-static-element-interactions -->
   <div class="modal-overlay" on:click={closeModal}>
+    <!-- svelte-ignore a11y-click-events-have-key-events -->
+    <!-- svelte-ignore a11y-no-static-element-interactions -->
+    <!-- svelte-ignore a11y-no-static-element-interactions -->
     <div class="modal" on:click|stopPropagation>
       <h3>Your Vacuum's Current Location</h3>
       <div class="house-outline">
@@ -133,11 +139,11 @@
 {/if}
 
 <style>
-  body {
+  /* body {
     font-family: "Poppins", sans-serif;
     background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
     color: #333;
-  }
+  } */
 
   .control-panel {
     display: flex;
@@ -147,7 +153,7 @@
     background: linear-gradient(145deg, #e0e0e0, #f0f0f0);
     border-radius: 25px;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
-    max-width: 1000px;
+    /* max-width: 1000px; */
     margin: 40px auto;
   }
 

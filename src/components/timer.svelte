@@ -63,7 +63,7 @@
     border-radius: 15px;
     box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.1), -4px -4px 8px rgba(255, 255, 255, 0.5);
     padding: 20px;
-    max-width: 200px;
+    max-width: 400px;
     margin: 2em auto;
     text-align: center;
     transition: transform 0.3s ease;

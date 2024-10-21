@@ -5,6 +5,7 @@
   import BatteryStatus from "./components/batteryhealth.svelte";
   import CleaningStatus from "./components/cleaningstatus.svelte";
   import ControlPanel from "./components/ControlPanel.svelte";
+  import Stop from "./components/stop.svelte";
   import "./app.css";
 
   let user = { username: "", name: "" };
@@ -41,82 +42,30 @@
           class:is-light={!isDarkMode}
         >
           <div class="header-text">
-            <!-- <h1 class="robo-ai" style="color: #FF10F0;">Hello {user.name}!</h1>
-            <h5 class="robo-ai" style="color: #FF10F0;">Thank you for being with us!</h5> -->
-
-            <!-- <h1 
-              class="robo-ai" 
-              style="
-                font-size: 2em; 
-                font-weight: bold; 
-                background: linear-gradient(to right, red, violet); 
-                background-size: 400%; 
-                -webkit-background-clip: text; 
-                color: transparent; 
-                animation: simpleColorWave 3s linear infinite;
-              ">
-              Hello {user.name}!
-            </h1>
-
-            <h5 
-              class="robo-ai" 
-              style="
-                font-size: 1.5em; 
-                font-weight: bold; 
-                background: linear-gradient(to right, red, ghostwhite, magenta); 
-                background-size: 400%; 
-                -webkit-background-clip: text; 
-                color: transparent; 
-                animation: simpleColorWave 3s linear infinite;
-              ">
-              Thank you for being with us!
-            </h5> -->
-
-            <!-- <h1 class="robo-ai" style="color: {isDarkMode ? 'ghostwhite' : 'navy'};">
-              Hello {user.name}!
-            </h1>
-            <h5 class="robo-ai" style="color: {isDarkMode ? 'ghostwhite' : 'navy'};">
-              Thank you for being with us!
-            </h5> -->
+            <h1 class="greeting-header">Hello {user.name}!</h1>
+            <h6 class="greeting-subtext">Thank you for being with us!</h6>
           </div>
         </div>
-        <div
-          class="grid-item"
-          class:is-dark={isDarkMode}
-          class:is-light={!isDarkMode}
-        >
-          <Timer {isDarkMode} />
-        </div>
-        <div
-          class="grid-item"
-          class:is-dark={isDarkMode}
-          class:is-light={!isDarkMode}
-        >
-          <BatteryStatus />
-        </div>
-        <div
-          class="grid-item"
-          class:is-dark={isDarkMode}
-          class:is-light={!isDarkMode}
-        >
-          <CleaningStatus />
+        <div class="grid-item">
+          <Stop />
         </div>
         <!-- <div class="grid-item" class:is-dark={isDarkMode} class:is-light={!isDarkMode}>
-          <ControlPanel />
+          <Timer {isDarkMode} />
         </div> -->
+        <div class="grid-item" class:is-dark={isDarkMode} class:is-light={!isDarkMode}>
+          <BatteryStatus />
+        </div>
+        <div class="grid-item" class:is-dark={isDarkMode} class:is-light={!isDarkMode}>
+          <CleaningStatus />
+        </div>
       </div>
     </div>
   </main>
 
-  <div class="greeting-message">
-    <h1 class="greeting-header">Hello {user.name} !</h1>
-    <h6 class="greeting-subtext">Thank you for being with us!</h6>
-  </div>
-
   <div class="control-panel">
     <ControlPanel />
+    <Timer/>
   </div>
-  
 {/if}
 
 <style>
@@ -127,137 +76,95 @@
     box-sizing: border-box;
   }
 
-  /* @keyframes simpleColorWave {
-  0% {
-    background-position: 0%;
-  }
-  100% {
-    background-position: 100%;
-  }
-} */
-
   /* Main content fills the viewport */
   .main-content {
-    /* display: flex; */
-    /* flex-direction: column; */
-    margin-left: 11px;
-    padding-top: 60px; /*Adjust according to your Navbar height */
-    border-radius: 20%; /* Makes the main content circular */
-    overflow: hidden; /* Ensures that content stays within the circle */
+    width: 80vmin;
+    height: 80vmin;
+    margin: 50px auto;
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #ffafbd, #ffc3a0);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
   }
 
   /* Wrapper to center content */
   .content-wrapper {
     width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-    flex: 1;
+    height: 100%;
     display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
 
   /* Grid container styles */
   .grid-container {
-    flex: 1;
     display: grid;
-    /* grid-template-columns: 1fr 1fr; 2 columns */
+    /* grid-template-columns: 1fr 1fr; */
     gap: 20px;
-    padding: 5px;
-    background-color: #eaeaea;
+    width: 90%;
+    height: 90%;
   }
 
-  /* Make the greeting message span two columns */
+  /* Greeting message styles */
   .greeting-item {
-    color: ghostwhite;
-    grid-column: 1 / -1; /* Spans from column 1 to the end */
-    background-color: #ffffff;
+    grid-column: 1 / -1;
+    text-align: center;
     padding: 20px;
-    border-radius: 8px;
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    /* Optional shadow */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  }
-
-  .grid-item {
-    /* background-color: #ff4d4d; */
-    color: ghostwhite;
-    padding: 20px;
-    border-radius: 8px;
-    box-sizing: border-box;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    /* Optional shadow */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  }
-
-  /* Light and dark mode grid item styles for better UI view */
-  .grid-item.is-light {
-    background-color: aqua;
-    color: navy !important;
-    font-weight: bold;
-    font-family: Georgia, Times, "Times New Roman", serif;
-  }
-
-  .grid-item.is-dark {
-    background-color: navy;
-    color: ghostwhite !important;
-    font-weight: bold;
-    font-family: Georgia, Times, "Times New Roman", serif;
-  }
-
-  /* Dark mode adjustments */
-  [data-theme="dark"] .grid-container {
-    background-color: navy;
-  }
-
-  :global([data-theme="dark"]) .grid-item,
-  :global([data-theme="dark"]) .greeting-item {
-    background-color: navy;
-    color: #fff;
-  }
-
-  .greeting-message {
-    position: absolute;
-    top: 80px; /* Adjust according to your Navbar height */
-    right: 20px;
-    text-align: right;
-    padding: 15px;
-    background: linear-gradient(to right, #ffafbd, #ffc3a0);
     border-radius: 15px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    max-width: 300px;
+    background: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   }
 
   .greeting-header {
-    font-size: 2.5rem;
+    font-size: 2rem;
     font-weight: bold;
-    color: #ffffff;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    color: #333;
   }
 
   .greeting-subtext {
-    font-size: 1.2rem;
+    font-size: 1rem;
     font-style: italic;
-    color: #ffffff;
-    margin-top: 10px;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+    color: #555;
   }
 
+  /* Grid item styles */
+  .grid-item {
+    /* background-color: rgba(255, 255, 255, 0.8); */
+    padding: 10px;
+    border-radius: 35px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
+  }
+
+  /* Light and dark mode grid item styles */
+  .grid-item.is-light {
+    background-color: #f0f0f0;
+    color: #333;
+  }
+
+  .grid-item.is-dark {
+    background-color: #333;
+    color: #f0f0f0;
+  }
+
+  /* Control panel styles */
   .control-panel {
     position: absolute;
-    top: 180px; /* Adjust to add appropriate space below greeting */
+    top: 120px; /* Adjust to add appropriate space below greeting */
     right: 20px;
     text-align: right;
     padding: 15px;
     background: #ffffff;
     border-radius: 15px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    max-width: 300px;
+    /* max-width: 300px; */
     margin-top: 20px; /* Adds space below greeting message */
   }
 </style>

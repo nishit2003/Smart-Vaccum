@@ -13,17 +13,18 @@
 
 <!-- Display cleaning status -->
 <div class="cleaning-container">
+  <p class="cleaning-text" style="color: {dirtLevel > 80 ? '#f44336' : '#333'}">
+    {dirtLevel > 80
+      ? `Warning: Change dirt bag soon! Dirt level: ${dirtLevel}%`
+      : `Vacuum is clean! Dirt level: ${dirtLevel}%`}
+  </p>
   <div class="cleaning-visual">
     <div
       class="dirt-level"
       style="width: {dirtLevel}%; background-color: {dirtLevel > 80 ? '#f44336' : '#66bb6a'}"
     ></div>
   </div>
-  <p class="cleaning-text" style="color: {dirtLevel > 80 ? '#f44336' : '#333'}">
-    {dirtLevel > 80
-      ? `Warning: Change dirt bag soon! Dirt level: ${dirtLevel}%`
-      : `Vacuum is clean! Dirt level: ${dirtLevel}%`}
-  </p>
+  
 </div>
 
 <style>
@@ -36,7 +37,7 @@
     border-radius: 20px; /* Rounded corners */
     box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1); /* Softer and larger shadow */
     transition: transform 0.2s ease; /* Subtle scaling on hover */
-    max-width: 220px;
+    max-width: 450px;
   }
 
   .cleaning-container:hover {
@@ -44,7 +45,7 @@
   }
 
   .cleaning-visual {
-    width: 100px; /* Increased width */
+    width: 400px; /* Increased width */
     height: 50px; /* Height for visual representation */
     border: 4px solid rgba(0, 0, 0, 0.2); /* Softer border */
     position: relative;
@@ -62,7 +63,7 @@
   }
 
   .cleaning-text {
-    font-size: 12px; /* Font size for text */
+    font-size: 22px; /* Font size for text */
     font-weight: 500; /* Lighter font weight for modern look */
     margin-top: 10px; /* Spacing above text */
     transition: color 0.3s ease;

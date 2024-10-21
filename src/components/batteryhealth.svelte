@@ -13,15 +13,18 @@
 
 <!-- Display battery status -->
 <div class="battery-container">
+  <p class="battery-text" style="color: {batteryLevel < 20 ? '#f44336' : '#333'}">
+    {batteryLevel < 20
+      ? `Warning: Charge Soon. Battery about to die: ${batteryLevel}%`
+      : `Vaccum Battery: ${batteryLevel}%`}
+  </p>
   <div class="battery-visual">
     <div
       class="battery-level"
       style="width: {batteryLevel}%; background-color: {batteryLevel < 20 ? '#f44336' : '#66bb6a'}"
     ></div>
   </div>
-  <p class="battery-text">
-    Battery: {batteryLevel}%
-  </p>
+  
 </div>
 
 <style>
@@ -34,7 +37,7 @@
     border-radius: 20px; /* Larger rounded corners */
     box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1); /* Softer and larger shadow */
     transition: transform 0.2s ease; /* Subtle scaling on hover */
-    max-width: 120px;
+    max-width: 450px;
   }
 
   .battery-container:hover {
@@ -42,7 +45,7 @@
   }
 
   .battery-visual {
-    width: 100px; /* Increased width */
+    width: 400px; /* Increased width */
     height: 50px; /* Increased height */
     border: 4px solid rgba(0, 0, 0, 0.2); /* Softer border */
     position: relative;
@@ -72,7 +75,7 @@
   }
 
   .battery-text {
-    font-size: 12px; /* Slightly larger text */
+    font-size: 22px; /* Slightly larger text */
     font-weight: 500; /* Slightly lighter font weight for a modern look */
     color: #333; /* Softer text color */
     margin-top: 10px; /* Add a bit of space above the text */
