@@ -48,7 +48,7 @@
 <!-- Navbar component -->
 <FlowNavbar class="fixed top-0 left-0 right-0 z-50">
   <NavBrand href="/">
-    <span class="self-center whitespace-nowrap text-xl font-semibold dark:text-white">
+    <span class="self-center whitespace-nowrap text-xl font-semibold dark:text-white" style="font-weight: bold; font-family:Georgia, 'Times New Roman', Times, serif;">
       iVaccum
     </span>
   </NavBrand>
