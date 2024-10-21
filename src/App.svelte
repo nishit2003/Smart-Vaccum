@@ -156,7 +156,7 @@
 
   /* Light and dark mode grid item styles */
   .control-panel.is-light {
-    background-color: #f0f0f0;
+    background-color: #00ffff;
     color: navy;
   }
 
@@ -174,6 +174,7 @@
     text-align: right;
     padding: 15px;
     background: #ffffff;
+    /* background: linear-gradient(135deg, #00ffff, #ccffff); */
     border-radius: 15px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     /* max-width: 300px; */
