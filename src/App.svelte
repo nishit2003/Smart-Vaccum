@@ -154,7 +154,11 @@
     color: #f0f0f0;
   }
 
-  
+  /* Light and dark mode grid item styles */
+  .control-panel.is-light {
+    background-color: #f0f0f0;
+    color: #333;
+  }
 
   /* Control panel styles */
   .control-panel {
