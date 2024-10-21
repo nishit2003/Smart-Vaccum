@@ -36,7 +36,7 @@
 
 <!-- Button to open the modal -->
  <div class="open-modal-btn">  
-  <Button on:click={toggleModal}>Show User & Device Information</Button>
+  <Button on:click={toggleModal}><strong>Show User & Device Information</strong></Button>
 </div>
 
 <!-- Modal Window -->
@@ -135,6 +135,9 @@
 
   .open-modal-btn {
     background: linear-gradient(145deg);
+    /* font-weight: bold; */
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: ghostwhite;
     border-radius: 25px;
     font-weight: bold;
     font-size: 1rem;
