@@ -27,13 +27,15 @@
     <div class="map-grid">
       {#each rooms as room}
         <div class="map-item">
-          <h3>{room.name} <Button color="light" size="xs" class="update-button">Update</Button></h3>
+          <h3 class="flex items-center justify-between">
+            <span>{room.name}</span>
+            <Button color="red" size="xs" class="mb-2">Update</Button>
+          </h3>
           <img src={room.image} alt="{room.name} Map" />
         </div>
       {/each}
     </div>
-    <Button color="light" class="mt-4" on:click={addNewRoom}>Add New Room</Button>
-    <Button color="light" class="mt-4" on:click={() => (showMapModal = false)}>Close</Button>
+    <Button color="green" class="mt-4" on:click={addNewRoom}>Add New Room</Button>
   </div>
 </Modal>
 
@@ -60,13 +62,4 @@
     border: 1px solid #ccc;
     border-radius: 8px;
   }
-  /* .update-button {
-    margin-left: 0.5rem;
-  }
-  .add-room-button {
-    position: fixed;
-    bottom: 1rem;
-    right: 1rem;
-    z-index: 100;
-  } */
 </style>

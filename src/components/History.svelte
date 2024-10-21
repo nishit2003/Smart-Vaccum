@@ -115,8 +115,6 @@
       <h3>Weekly Usage Hours</h3>
       <canvas id="usageChart"></canvas>
     </div>
-    
-    <Button color="light" class="mt-4" on:click={() => (showHistoryModal = false)}>Close</Button>
   </div>
 </Modal>
 

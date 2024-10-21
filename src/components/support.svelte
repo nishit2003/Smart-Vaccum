@@ -39,7 +39,6 @@
         </div>
       {/each}
     </div>
-    <Button color="light" class="mt-4" on:click={() => (showSupportModal = false)}>Close</Button>
   </div>
 </Modal>
 
@@ -49,23 +48,20 @@
     text-align: left; */
     padding: 2rem;
     text-align: center;
-    background: linear-gradient(145deg, #ff4d4d, #ff4d4d);
-    border-radius: 20px;
-    box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.2), -6px -6px 12px rgba(255, 255, 255, 0.5);
-  }
+    background: linear-gradient(145deg, #e6324b, #e6324b);
+    border-radius: 20px;  }
   .support-title {
     /* font-weight: bold;
     margin-bottom: 1rem; */
     font-size: 2rem;
-    color: ghostwhite;
+    color: #2b2b2b;
     font-weight: bold;
     margin-bottom: 1rem;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
   }
   .faq-list {
     /* margin-bottom: 2rem; */
     list-style-type: none;
-    color: navy;
+    color: #2b2b2b;
     padding: 0;
     margin: 0;
     margin-bottom: 1.5rem;
@@ -75,9 +71,8 @@
     font-size: 1.1rem;
     margin-bottom: 0.7rem;
     padding: 0.7rem;
-    background: aqua;
+    background: #ffc6a5;
     border-radius: 10px;
-    box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.1), -3px -3px 6px rgba(255, 255, 255, 0.5);
     transition: transform 0.3s;
   }
 
