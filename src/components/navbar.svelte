@@ -87,7 +87,7 @@
   <!-- Navbar Links -->
   <NavUl>
     <NavLi href="/" activeClass="active">Home/Exit</NavLi>
-    <NavLi on:click={toggleScheduleModal} style="cursor: pointer;">Schedule</NavLi>
+    <NavLi on:click={toggleScheduleModal} style="cursor: pointer; font-weight: bold; font-family:Georgia, 'Times New Roman', Times, serif; color: #ff13f0;">Schedule</NavLi>
     <NavLi on:click={toggleHistoryModal} style="cursor: pointer;">History</NavLi>
     <NavLi on:click={toggleMapModal} style="cursor: pointer;">Map</NavLi>
     <NavLi on:click={toggleSupportModal} style="cursor: pointer;">Support</NavLi>

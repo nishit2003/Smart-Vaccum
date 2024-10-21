@@ -122,7 +122,7 @@
   .greeting-header {
     font-size: 2rem;
     font-weight: bold;
-    color: #333;
+    color: black;
   }
 
   .greeting-subtext {
@@ -146,23 +146,23 @@
   /* Light and dark mode grid item styles */
   .grid-item.is-light {
     background-color: #f0f0f0;
-    color: #333;
+    color: black;
   }
 
   .grid-item.is-dark {
-    background-color: #333;
+    background-color: black;
     color: #f0f0f0;
   }
 
   /* Light and dark mode grid item styles */
   .control-panel.is-light {
     background-color: #f0f0f0;
-    color: #333;
+    color: black;
   }
 
   /* Here is for the dark mode*/
   .control-panel.is-dark {
-    background-color: #333;
+    background-color: black;
     color: #f0f0f0;
   }
 
