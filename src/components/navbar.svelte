@@ -90,6 +90,6 @@
     <NavLi on:click={toggleScheduleModal} style="cursor: pointer; font-weight: bold; font-family:Georgia, 'Times New Roman', Times, serif; color: #ff13f0;">Schedule</NavLi>
     <NavLi on:click={toggleHistoryModal} style="cursor: pointer; font-weight: bold; font-family:Georgia, 'Times New Roman', Times, serif; color: #ff13f0;">History</NavLi>
     <NavLi on:click={toggleMapModal} style="cursor: pointer; font-weight: bold; font-family:Georgia, 'Times New Roman', Times, serif; color: #ff13f0;">Map</NavLi>
-    <NavLi on:click={toggleSupportModal} style="cursor: pointer;">Support</NavLi>
+    <NavLi on:click={toggleSupportModal} style="cursor: pointer; font-weight: bold; font-family:Georgia, 'Times New Roman', Times, serif; color: #ff13f0;">Support</NavLi>
   </NavUl>
 </FlowNavbar>
