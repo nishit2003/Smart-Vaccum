@@ -160,6 +160,12 @@
     color: #333;
   }
 
+  /* Here is for the dark mode*/
+  .control-panel.is-dark {
+    background-color: #333;
+    color: #f0f0f0;
+  }
+
   /* Control panel styles */
   .control-panel {
     position: absolute;
