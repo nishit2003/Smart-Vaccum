@@ -86,7 +86,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(135deg, #00ffff, #ccffff);
+    background: linear-gradient(135deg, #f3b9fa, #baf7ef);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
   }
 
@@ -156,7 +156,7 @@
 
   /* Light and dark mode grid item styles */
   .control-panel.is-light {
-    background-color: #00ffff;
+    background: linear-gradient(135deg, #f3b9fa, #baf7ef);
     color: navy;
   }
 
