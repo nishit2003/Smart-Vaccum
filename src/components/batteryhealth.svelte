@@ -13,7 +13,7 @@
 
 <!-- Display battery status -->
 <div class="battery-container">
-  <p class="battery-text" style="color: {batteryLevel < 20 ? '#f44336' : '#333'}">
+  <p class="battery-text" style="color: {batteryLevel < 20 ? '#f44336' : 'navy'}">
     {batteryLevel < 20
       ? `Warning: Charge Soon. Battery about to die: ${batteryLevel}%`
       : `Vaccum Battery: ${batteryLevel}%`}
@@ -77,7 +77,7 @@
   .battery-text {
     font-size: 22px; /* Slightly larger text */
     font-weight: 500; /* Slightly lighter font weight for a modern look */
-    color: #333; /* Softer text color */
+    color: navy; /* Softer text color */
     margin-top: 10px; /* Add a bit of space above the text */
     transition: color 0.3s ease;
   }

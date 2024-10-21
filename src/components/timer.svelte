@@ -72,17 +72,17 @@
   /* Light and dark mode grid item styles */
   .box.is-light {
     background-color: #f0f0f0;
-    color: #333;
+    color: navy;
   }
 
   .box.is-dark {
-    background-color: #333;
+    background-color: navy;
     color: #f0f0f0;
   }
 
   .timer-box.light {
     background-color: #f4f4f4;
-    color: #333;
+    color: navy;
   }
 
   .timer-box.dark {
@@ -152,6 +152,6 @@
   /* Centering content inside the box */
   .box p {
     margin-bottom: 1em;
-    color: #333;
+    color: navy;
   }
 </style>
