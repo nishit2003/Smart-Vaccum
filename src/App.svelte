@@ -42,8 +42,8 @@
           class:is-light={!isDarkMode}
         >
           <div class="header-text">
-            <h1 class="greeting-header">Hello {user.name}!</h1>
-            <h6 class="greeting-subtext">Thank you for being with us!</h6>
+            <h1 class="greeting-header" style="color: #ff13f0; font-family:Georgia, 'Times New Roman', Times, serif; font-style: bold;">Hello {user.name}!</h1>
+            <h6 class="greeting-subtext" style="color: #ff13f0; font-family:Georgia, 'Times New Roman', Times, serif; font-style: bold, italic;">Thank you for being with us!</h6>
           </div>
         </div>
         <div class="grid-item">
