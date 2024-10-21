@@ -38,7 +38,7 @@
 
 <div class="box" class:is-dark={isDarkMode} class:is-light={!isDarkMode}>
   {#if !askToStart && !timerStarted}
-    <p>Do you want to start the timed cleaning?</p>
+    <p style="font-weight: bold; font-family:Georgia, 'Times New Roman', Times, serif;">Do you want to start the timed cleaning?</p>
     <button on:click={() => handleUserResponse(true)}>Yes</button>
     <button on:click={() => handleUserResponse(false)}>No</button>
   {/if}
