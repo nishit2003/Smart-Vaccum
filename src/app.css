@@ -118,7 +118,8 @@ button:focus-visible {
 
 /* Dark mode adjustments for grid and greeting */
 [data-theme="dark"] .grid-container {
-  background-color: navy;
+  /* background-color: navy; */
+  font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 [data-theme="dark"] .grid-item,
