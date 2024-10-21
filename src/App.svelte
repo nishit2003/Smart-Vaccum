@@ -86,7 +86,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(135deg, #ffafbd, #ffc3a0);
+    background: linear-gradient(135deg, #00ffff, #ccffff);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
   }
 

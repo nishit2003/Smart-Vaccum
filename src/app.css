@@ -114,12 +114,14 @@ button:focus-visible {
 [data-theme="dark"] button {
   background-color: navy;
   color: white;
+  /* font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; */
 }
 
 /* Dark mode adjustments for grid and greeting */
 [data-theme="dark"] .grid-container {
   /* background-color: navy; */
-  font-family: Georgia, 'Times New Roman', Times, serif;
+  /* font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; */
+  font-weight: bold;
 }
 
 [data-theme="dark"] .grid-item,
