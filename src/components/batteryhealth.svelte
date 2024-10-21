@@ -34,7 +34,7 @@
     border-radius: 20px; /* Larger rounded corners */
     box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1); /* Softer and larger shadow */
     transition: transform 0.2s ease; /* Subtle scaling on hover */
-    max-width: 450px;
+    max-width: 120px;
   }
 
   .battery-container:hover {
@@ -42,8 +42,8 @@
   }
 
   .battery-visual {
-    width: 420px; /* Increased width */
-    height: 90px; /* Increased height */
+    width: 100px; /* Increased width */
+    height: 50px; /* Increased height */
     border: 4px solid rgba(0, 0, 0, 0.2); /* Softer border */
     position: relative;
     margin-bottom: 15px; /* Increased margin */
@@ -72,7 +72,7 @@
   }
 
   .battery-text {
-    font-size: 22px; /* Slightly larger text */
+    font-size: 12px; /* Slightly larger text */
     font-weight: 500; /* Slightly lighter font weight for a modern look */
     color: #333; /* Softer text color */
     margin-top: 10px; /* Add a bit of space above the text */

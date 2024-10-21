@@ -39,9 +39,7 @@
   <button class="btn stop-btn" on:click={stop} disabled={!isRunning}>
     Stop
   </button>
-  <button class="btn dock-btn" on:click={returnToDock}>
-    Return to Dock
-  </button>
+  <button class="btn dock-btn" on:click={returnToDock}> Return to Dock </button>
   <button class="btn location-btn" on:click={showLocation}>
     Show Location
   </button>
@@ -50,36 +48,83 @@
 <!-- Modal for Location -->
 {#if showModal}
   <div class="modal-overlay" on:click={closeModal}>
-
-  <!-- <div 
-    class="modal-overlay" 
-      on:click={closeModal} 
-        on:keydown={event => event.key === 'Enter' && closeModal()} 
-        tabindex="0" 
-        role="button" 
-        aria-label="Close Modal"
-  > -->
-
     <div class="modal" on:click|stopPropagation>
       <h3>Your Vacuum's Current Location</h3>
       <div class="house-outline">
         <!-- Enhanced SVG Outline of House -->
         <svg viewBox="0 0 100 100" class="house-svg">
           <!-- Main outer walls of the house -->
-          <rect x="5" y="5" width="90" height="90" stroke="black" fill="none" stroke-width="2" />
-          
+          <rect
+            x="5"
+            y="5"
+            width="90"
+            height="90"
+            stroke="black"
+            fill="none"
+            stroke-width="2"
+          />
+
           <!-- Interior walls (rooms or partitions) -->
-          <line x1="5" y1="35" x2="95" y2="35" stroke="black" stroke-width="1.5" />
-          <line x1="35" y1="5" x2="35" y2="95" stroke="black" stroke-width="1.5" />
-          <line x1="5" y1="70" x2="65" y2="70" stroke="black" stroke-width="1.5" />
-          <line x1="65" y1="70" x2="65" y2="95" stroke="black" stroke-width="1.5" />
+          <line
+            x1="5"
+            y1="35"
+            x2="95"
+            y2="35"
+            stroke="black"
+            stroke-width="1.5"
+          />
+          <line
+            x1="35"
+            y1="5"
+            x2="35"
+            y2="95"
+            stroke="black"
+            stroke-width="1.5"
+          />
+          <line
+            x1="5"
+            y1="70"
+            x2="65"
+            y2="70"
+            stroke="black"
+            stroke-width="1.5"
+          />
+          <line
+            x1="65"
+            y1="70"
+            x2="65"
+            y2="95"
+            stroke="black"
+            stroke-width="1.5"
+          />
 
           <!-- Door openings (gaps in walls) -->
-          <line x1="50" y1="35" x2="50" y2="45" stroke="black" stroke-width="1.5" stroke-dasharray="4" />
-          <line x1="35" y1="55" x2="45" y2="55" stroke="black" stroke-width="1.5" stroke-dasharray="4" />
+          <line
+            x1="50"
+            y1="35"
+            x2="50"
+            y2="45"
+            stroke="black"
+            stroke-width="1.5"
+            stroke-dasharray="4"
+          />
+          <line
+            x1="35"
+            y1="55"
+            x2="45"
+            y2="55"
+            stroke="black"
+            stroke-width="1.5"
+            stroke-dasharray="4"
+          />
 
           <!-- Simulated random location marker inside the house -->
-          <circle cx={currentLocation.x} cy={currentLocation.y} r="3" fill="red" />
+          <circle
+            cx={currentLocation.x}
+            cy={currentLocation.y}
+            r="3"
+            fill="red"
+          />
         </svg>
       </div>
       <button class="btn close-btn" on:click={closeModal}>Close</button>
@@ -88,60 +133,70 @@
 {/if}
 
 <style>
+  body {
+    font-family: "Poppins", sans-serif;
+    background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+    color: #333;
+  }
+
   .control-panel {
     display: flex;
     justify-content: center;
-    gap: 20px;
-    padding: 20px;
-    background: linear-gradient(145deg, #ffffff, #f0f0f0);
-    border-radius: 15px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-    max-width: 500px;
-    margin: auto;
+    gap: 10px;
+    padding: 10px;
+    background: linear-gradient(145deg, #e0e0e0, #f0f0f0);
+    border-radius: 25px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    max-width: 1000px;
+    margin: 40px auto;
   }
 
   .btn {
-    padding: 15px 25px;
+    padding: 15px 30px;
     font-size: 16px;
     font-weight: bold;
     border: none;
     border-radius: 50px;
     cursor: pointer;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    transition:
+      transform 0.3s ease,
+      box-shadow 0.3s ease;
+    background: linear-gradient(135deg, #6dd5ed, #2193b0);
+    color: white;
   }
 
   .btn:disabled {
     cursor: not-allowed;
-    opacity: 0.5;
+    opacity: 0.6;
   }
 
   .start-btn {
-    background-color: #4caf50; /* Green for start */
-    color: white;
+    background: linear-gradient(135deg, #a8e063, #56ab2f); /* Green for start */
   }
 
   .stop-btn {
-    background-color: #f44336; /* Red for stop */
-    color: white;
+    background: linear-gradient(135deg, #f85032, #e73827); /* Red for stop */
   }
 
   .dock-btn {
-    background-color: #2196f3; /* Blue for dock */
-    color: white;
+    background: linear-gradient(135deg, #36d1dc, #5b86e5); /* Blue for dock */
   }
 
   .location-btn {
-    background-color: #ff9800; /* Orange for show location */
-    color: white;
+    background: linear-gradient(
+      135deg,
+      #f7971e,
+      #ffd200
+    ); /* Orange for show location */
   }
 
   .btn:hover:not(:disabled) {
-    transform: scale(1.05);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
   }
 
   .btn:active {
-    transform: scale(0.95);
+    transform: translateY(0);
   }
 
   /* Modal Styles */
@@ -151,51 +206,43 @@
     left: 0;
     width: 100vw;
     height: 100vh;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.6);
     display: flex;
     justify-content: center;
     align-items: center;
   }
 
   .modal {
-    background: white;
-    padding: 20px;
-    border-radius: 10px;
-    max-width: 400px;
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 20px;
+    max-width: 450px;
     width: 90%;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
     text-align: center;
   }
 
   .house-outline {
-    margin: 20px 0;
+    margin: 30px 0;
   }
 
   .house-svg {
     width: 100%; /* Full width */
-    height: 300px; /* Fixed height for the house outline */
+    height: auto;
   }
 
   .close-btn {
-    background-color: #f44336;
+    background: linear-gradient(135deg, #f85032, #e73827);
     color: white;
-    padding: 10px 20px;
-    border-radius: 5px;
+    padding: 10px 25px;
+    border-radius: 50px;
     cursor: pointer;
+    transition: transform 0.2s ease;
+  }
+
+  .close-btn:hover {
+    transform: translateY(-3px);
   }
 
   /* Media Query for responsiveness */
-  @media (max-width: 600px) {
-    .control-panel {
-      flex-direction: column;
-      gap: 15px;
-    }
-    .btn {
-      width: 100%;
-    }
-
-    .house-svg {
-      height: 200px; /* Smaller house outline for small screens */
-    }
-  }
 </style>

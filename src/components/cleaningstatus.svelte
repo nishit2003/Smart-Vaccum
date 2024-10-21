@@ -36,7 +36,7 @@
     border-radius: 20px; /* Rounded corners */
     box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1); /* Softer and larger shadow */
     transition: transform 0.2s ease; /* Subtle scaling on hover */
-    max-width: 450px;
+    max-width: 220px;
   }
 
   .cleaning-container:hover {
@@ -44,8 +44,8 @@
   }
 
   .cleaning-visual {
-    width: 420px; /* Increased width */
-    height: 90px; /* Height for visual representation */
+    width: 100px; /* Increased width */
+    height: 50px; /* Height for visual representation */
     border: 4px solid rgba(0, 0, 0, 0.2); /* Softer border */
     position: relative;
     margin-bottom: 15px; /* Increased margin */
@@ -62,7 +62,7 @@
   }
 
   .cleaning-text {
-    font-size: 22px; /* Font size for text */
+    font-size: 12px; /* Font size for text */
     font-weight: 500; /* Lighter font weight for modern look */
     margin-top: 10px; /* Spacing above text */
     transition: color 0.3s ease;
