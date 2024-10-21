@@ -13,7 +13,7 @@
 
 <!-- Display cleaning status -->
 <div class="cleaning-container">
-  <p class="cleaning-text" style="color: {dirtLevel > 80 ? '#f44336' : '#333'}">
+  <p class="cleaning-text" style="color: {dirtLevel > 80 ? '#f44336' : 'navy'}">
     {dirtLevel > 80
       ? `Warning: Change dirt bag soon! Dirt level: ${dirtLevel}%`
       : `Vacuum is clean! Dirt level: ${dirtLevel}%`}

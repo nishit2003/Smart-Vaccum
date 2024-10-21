@@ -39,7 +39,9 @@
   <button class="btn stop-btn" on:click={stop} disabled={!isRunning}>
     Stop
   </button>
-  <button class="btn dock-btn" on:click={returnToDock}> Return to Dock </button>
+  <button class="btn dock-btn" on:click={returnToDock}> 
+    Return to Dock 
+  </button>
   <button class="btn location-btn" on:click={showLocation}>
     Show Location
   </button>

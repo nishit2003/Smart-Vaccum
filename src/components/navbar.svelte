@@ -51,7 +51,7 @@
 <!-- Navbar component -->
 <FlowNavbar class="fixed top-0 left-0 right-0 z-50">
   <NavBrand href="/">
-    <span class="self-center whitespace-nowrap text-xl font-semibold dark:text-white">
+    <span class="self-center whitespace-nowrap text-xl font-semibold dark:text-white" style="font-weight: bold; font-family:Georgia, 'Times New Roman', Times, serif;">
       iVaccum
     </span>
   </NavBrand>
@@ -64,7 +64,7 @@
     <button
       on:click={toggleTheme}
       class="ml-3 p-2 bg-blue-500 text-white rounded-md"
-      style="background-color: {isDarkMode ? 'aqua' : 'navy'}; color: {isDarkMode ? 'navy' : 'ghostwhite'}"
+      style="background-color: {isDarkMode ? '#baf7ef' : 'navy'}; color: {isDarkMode ? 'navy' : 'ghostwhite'}; font-weight: bold;"
     >
       {isDarkMode ? "Light Mode 🌝" : "Dark Mode 🌚"}
     </button>
@@ -89,10 +89,10 @@
 
   <!-- Navbar Links -->
   <NavUl>
-    <NavLi href="/" activeClass="active">Home/Exit</NavLi>
-    <NavLi on:click={toggleScheduleModal} style="cursor: pointer;">Schedule</NavLi>
-    <NavLi on:click={toggleHistoryModal} style="cursor: pointer;">History</NavLi>
-    <NavLi on:click={toggleMapModal} style="cursor: pointer;">Map</NavLi>
-    <NavLi on:click={toggleSupportModal} style="cursor: pointer;">Support</NavLi>
+    <NavLi href="/" activeClass="active" style="font-weight: bold; font-family:Georgia, 'Times New Roman', Times, serif; color: #ff13f0;">Home/Exit</NavLi>
+    <NavLi on:click={toggleScheduleModal} style="cursor: pointer; font-weight: bold; font-family:Georgia, 'Times New Roman', Times, serif; color: #ff13f0;">Schedule</NavLi>
+    <NavLi on:click={toggleHistoryModal} style="cursor: pointer; font-weight: bold; font-family:Georgia, 'Times New Roman', Times, serif; color: #ff13f0;">History</NavLi>
+    <NavLi on:click={toggleMapModal} style="cursor: pointer; font-weight: bold; font-family:Georgia, 'Times New Roman', Times, serif; color: #ff13f0;">Map</NavLi>
+    <NavLi on:click={toggleSupportModal} style="cursor: pointer; font-weight: bold; font-family:Georgia, 'Times New Roman', Times, serif; color: #ff13f0;">Support</NavLi>
   </NavUl>
 </FlowNavbar>

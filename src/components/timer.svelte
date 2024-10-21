@@ -38,13 +38,13 @@
 
 <div class="box" class:is-dark={isDarkMode} class:is-light={!isDarkMode}>
   {#if !askToStart && !timerStarted}
-    <p>Do you want to start the timed cleaning?</p>
+    <p style="font-weight: bold; font-family:Georgia, 'Times New Roman', Times, serif;">Do you want to start the timed cleaning?</p>
     <button on:click={() => handleUserResponse(true)}>Yes</button>
     <button on:click={() => handleUserResponse(false)}>No</button>
   {/if}
 
   {#if askToStart && !timerStarted}
-    <p>Enter the time for the timer (in minutes):</p>
+    <p style="font-weight: bold; font-family:Georgia, 'Times New Roman', Times, serif;">Enter the time for the timer (in minutes):</p>
     <input type="number" bind:value={timeInput} min="1" />
     <button on:click={startTimer}>Start Timer</button>
   {/if}
@@ -72,17 +72,17 @@
   /* Light and dark mode grid item styles */
   .box.is-light {
     background-color: #f0f0f0;
-    color: #333;
+    color: navy;
   }
 
   .box.is-dark {
-    background-color: #333;
+    background-color: navy;
     color: #f0f0f0;
   }
 
   .timer-box.light {
     background-color: #f4f4f4;
-    color: #333;
+    color: navy;
   }
 
   .timer-box.dark {
@@ -152,6 +152,6 @@
   /* Centering content inside the box */
   .box p {
     margin-bottom: 1em;
-    color: #333;
+    color: navy;
   }
 </style>

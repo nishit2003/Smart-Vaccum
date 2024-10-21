@@ -36,7 +36,7 @@
 
 <!-- Button to open the modal -->
  <div class="open-modal-btn">  
-  <Button on:click={toggleModal}>Show User & Device Information</Button>
+  <Button on:click={toggleModal}><strong>Show User & Device Information</strong></Button>
 </div>
 
 <!-- Modal Window -->
@@ -45,7 +45,7 @@
     <h1 class="info-title">User Information</h1>
     <div class="info-box">
       <p><strong>Name:</strong> {user.name}</p>
-      <p><strong>Username:</strong> {user.username}</p>
+      <p><strong>User-ID:</strong> {user.username}</p>
     </div>
     <br />
     <h1 class="info-title">Device Information</h1>
@@ -65,8 +65,8 @@
           <li class="instruction-item">Press the 'Stop' button to stop the cleaning session.</li>
           <li class="instruction-item">Press the 'Timer' button to start a timed-cleaning session.</li>
           <li class="instruction-item">Use the 'Suction' button to adjust the vacuum's power.</li>
-          <li class="instruction-item">Check the battery status on the top right of the UI.</li>
-          <li class="instruction-item">Use 'Schedule' to set a recurring cleaning time.</li>
+          <li class="instruction-item">Check the battery status on the top-right of the User-Interface (UI).</li>
+          <li class="instruction-item">Use 'Schedule' to set a recurring cleaning time in your vacuum.</li>
           <li class="instruction-item">Press 'Return to Dock' to send the vacuum back to its charging station.</li>
     </ul>
 
@@ -135,6 +135,9 @@
 
   .open-modal-btn {
     background: linear-gradient(145deg);
+    /* font-weight: bold; */
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: ghostwhite;
     border-radius: 25px;
     font-weight: bold;
     font-size: 1rem;

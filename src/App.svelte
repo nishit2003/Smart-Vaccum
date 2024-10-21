@@ -32,7 +32,7 @@
   <Navbar {user} {isDarkMode} {toggleTheme} />
 
   <main class="main-content">
-    <div class="content-wrapper">
+    <div class="content-wrapper" class:is-dark={isDarkMode} class:is-light={!isDarkMode}>
       <!-- Grid container for components -->
       <div class="grid-container">
         <!-- Greeting message grid item -->
@@ -43,7 +43,7 @@
         >
           <div class="header-text">
             <h1 class="greeting-header" style="color: #ff13f0; font-family:Georgia, 'Times New Roman', Times, serif; font-style: bold;">Hello {user.name}!</h1>
-            <h6 class="greeting-subtext" style="color: #ff13f0; font-family:Georgia, 'Times New Roman', Times, serif; font-style: bold, italic;">Thank you for being with us!</h6>
+            <h6 class="greeting-subtext" style="color: #ff13f0; font-family:Georgia, 'Times New Roman', Times, serif; font-style: bold;">Thank you for being with us!</h6>
           </div>
         </div>
         <div class="grid-item">
@@ -62,7 +62,7 @@
     </div>
   </main>
 
-  <div class="control-panel">
+  <div class="control-panel" class:is-dark={isDarkMode} class:is-light={!isDarkMode}>
     <ControlPanel />
     <Timer/>
   </div>
@@ -86,7 +86,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(135deg, #ffafbd, #ffc3a0);
+    background: linear-gradient(135deg, #f3b9fa, #baf7ef);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
   }
 
@@ -98,6 +98,18 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+  }
+
+    /* Light and dark mode grid item styles */
+    .content-wrapper.is-light {
+    background: linear-gradient(135deg, #f3b9fa, #baf7ef);
+    /* color: navy; */
+  }
+
+  /* Here is for the dark mode*/
+  .content-wrapper.is-dark {
+    background-color: navy;
+    /* color: #f0f0f0; */
   }
 
   /* Grid container styles */
@@ -121,8 +133,8 @@
 
   .greeting-header {
     font-size: 2rem;
-    font-weight: bold;
-    color: #333;
+    /* font-weight: bold; */
+    color: navy;
   }
 
   .greeting-subtext {
@@ -145,12 +157,25 @@
 
   /* Light and dark mode grid item styles */
   .grid-item.is-light {
-    background-color: #f0f0f0;
-    color: #333;
+    /* background-color: #f0f0f0; */
+    /* background: linear-gradient(135deg, #f3b9fa, #baf7ef); */
+    color: #f0f0f0;
   }
 
   .grid-item.is-dark {
-    background-color: #333;
+    /* background-color: #f0f0f0; */
+    color: #f0f0f0;
+  }
+
+  /* Light and dark mode grid item styles */
+  .control-panel.is-light {
+    background: linear-gradient(135deg, #f3b9fa, #baf7ef);
+    color: navy;
+  }
+
+  /* Here is for the dark mode*/
+  .control-panel.is-dark {
+    background-color: navy;
     color: #f0f0f0;
   }
 
@@ -162,6 +187,7 @@
     text-align: right;
     padding: 15px;
     background: #ffffff;
+    /* background: linear-gradient(135deg, #00ffff, #ccffff); */
     border-radius: 15px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     /* max-width: 300px; */
